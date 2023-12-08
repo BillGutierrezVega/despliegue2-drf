@@ -8,15 +8,12 @@ class ArtistaSerializer(serializers.ModelSerializer):
 
 
 class CancionSerializer(serializers.ModelSerializer):
-    artista = ArtistaSerializer(read_only=True)
     class Meta:
         model = Cancion
         fields = '__all__'
         
 
 class PlaylistSerializer(serializers.ModelSerializer):
-    canciones = CancionSerializer(many=True, read_only=True)
-    
     class Meta:
         model = Playlist
         fields = '__all__'

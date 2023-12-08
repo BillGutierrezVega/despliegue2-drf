@@ -28,6 +28,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 INSTALLED_APPS = [
     'drf_des',
+    'datos',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,7 +54,7 @@ ROOT_URLCONF = 'despliegue.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
